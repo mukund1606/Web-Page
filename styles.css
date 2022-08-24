@@ -1,0 +1,278 @@
+body{
+    font-size: 22px;
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+i{
+    cursor: pointer;
+    padding: 15px;
+}
+
+.header{
+    background-color: rgba(0,0,0,.2);
+    position: absolute;
+    z-index: 2;
+    height: 125px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.header img{
+    margin: 5px;
+    height: 125px;
+}
+
+.header li, .mobilenav li{
+    color: white;
+    padding: 25px;
+    cursor: pointer;
+    list-style: none;
+    transition: all .75s;
+}
+
+.header li:hover, .mobilenav li:hover{
+    color: black;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.header ul, .mobilenav ul{
+    padding-right: 20px;
+    display: flex;
+    column-gap: 8px;
+}
+.mobilenav, .mobilebutton{
+    color: white;
+    visibility: hidden;
+    position: absolute;
+}
+.mobilenav i{
+    font-size: 40px;
+    margin-top: 50px;
+}
+.welcome{
+    color: white;
+    height: calc(100vh - 125px);
+    padding-top: 125px;
+    background-image: url(./assets/homesection.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.welcome p{
+    text-align: center;
+    width: 75%;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: antiquewhite;
+    padding-bottom: 15px;
+}
+.a{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    row-gap: 15px;
+    column-gap: 15px;
+    margin: 0 25px 0 25px;
+}
+
+.services img{
+    width: 180px;
+    height: 18  0px;
+    object-fit: cover;
+}
+.services div div{
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderpartner{
+    padding: 18px 0;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/assets/client.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.orderpartner img{
+    margin: 25px 5px;
+    height: 200px;
+}
+.orderpartner img:hover{
+    opacity: .7;
+}
+
+.contactus{
+    background-color: rgba(0,0,0,0);   
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 2px;
+    row-gap: 1px;
+    text-align: left;
+}
+
+.contactus::before{
+    width: 100%;
+    height: 21em;
+    margin: 0;
+    content: "";
+    background-image: url(./assets/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    opacity: .5;
+}
+
+
+.contactus div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
+}
+.contactus button{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 80px;
+    height: 40px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 8px;
+}
+.order-button{
+    color: aliceblue;
+    background-color: rgba(112, 65, 65, 0.8);
+    border: none;
+    border-radius: 8px;
+    width: 120px;
+    height: 40px;
+    margin-top: 15px;
+    padding: 8px;
+    transition: all .25s;
+}
+.order-button:active{
+    margin-top: 17px;
+    margin-left: 2px;
+}
+
+.contactus button::after{
+    position: absolute;
+    content: "";
+    width: 80px;
+    border-radius: 8px;
+    height: 40px;
+    margin-top: -8px;
+    margin-left: -56px;
+    background-color: orange;
+    z-index: -1;
+    transition: margin 1s;
+}
+.order-button::after{
+    width: 120px;
+}
+.contactus button:hover:after{
+    margin-top: -12px;
+    margin-left: -61px;
+}
+
+.contactus button:active:after{
+    background-color: lightsalmon;
+}
+
+.footer{
+    background-color: gray;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: 800;
+}
+
+
+@media (max-width: 480px) {
+    body{
+        font-size: 15px;
+    }
+    .nav{
+        visibility: hidden;
+        position: absolute;
+    }
+    .mobilebutton{
+        visibility: visible;
+        position: relative;
+        padding-right: 15px;
+    }
+    .mobilenav{
+        visibility: hidden;
+        z-index: 999;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0,0,0,.8);
+        opacity: 0;
+        transition: all 2s;
+    }
+    .mobilebutton i{
+        font-size: 30px;
+        color: white;
+    }
+    .services{
+        height: 100%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .a{
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    .header{
+        width: 100vw;
+    }
+    .header ul, .mobilenav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobilenav{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .orderpartner{
+        text-align: center;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .orderpartner img{
+        height: 50px;
+    }
+}

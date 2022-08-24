@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer>
+        let a = document.getElementsByClassName("mobilenav")
+        let vis = false;
+        function mobilebar(){
+            vis = !vis
+            a[0].style.visibility = vis ? "visible": "hidden";
+            a[0].style.opacity = vis ? 1 : 0;
+        }
+    </script>
+    <title>Web Page</title>
+</head>
+
+<body>
+    <section class="header">
+        <img src="./assets/logo.png" alt="logo">
+        <div class="nav">
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div class="mobilebutton" onclick="mobilebar()"><i class="fa-solid fa-bars"></i></div>
+    </section>
+    <div class="mobilenav">
+        <i class="fa-solid fa-xmark" onclick="mobilebar()"></i>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>  
+    <section class="body">
+        <div class="welcome">
+            <h1>Welcome To Das Chicken</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugit sunt architecto molestias, ratione
+                quod magnam vitae, tempore nihil eius nesciunt ut consectetur quasi. Totam fugiat deleniti facere
+                nostrum dolorum.</p>
+                <button class="order-button">Order Now</button>
+        </div>
+        <div class="services">
+            <h1>Our Services</h1>
+            <div class="a">
+                <div class="order">
+                    <img src="./assets/order.jpg" alt="order">
+                    <h2>Order Food Online</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, doloremque. Iure quia odit
+                        expedita! Exercitationem ab dolorem fugiat nesciunt similique velit cum aperiam eaque natus,
+                        dolore, perferendis autem nihil. Pariatur.</p>
+                </div>
+                <div class="dining">
+                    <img src="./assets/dining.jpg" alt=dining"">
+                    <h2>Dinign</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt esse odio quisquam aut repellat
+                        animi adipisci, similique, hic minima earum sapiente. Quas beatae culpa natus commodi maxime rem
+                        molestiae excepturi.</p>
+                </div>
+                <div class="catering">
+                    <img src="./assets/catering.jpg" alt="catering">
+                    <h2>Catering</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolorum sunt ipsam ea,
+                        doloribus saepe possimus amet beatae perferendis quo at nemo commodi dolorem ad eveniet quisquam
+                        rerum dolor est.</p>
+                </div>
+            </div>
+        </div>
+        <div class="orderpartner">
+            <h1>Our Delivery Partners</h1>
+            <div>
+                <img src="./assets/zomato.png" alt="zomato">
+                <img src="./assets/swiggy.png" alt="swiggy">
+                <img src="./assets/uber.png" alt="ubereats">
+                <img src="./assets/foodpanda.png" alt="foodpanda">
+            </div>
+        </div>
+        <div class="contactus">
+            <h1>Contact Us</h1>
+            <div class="form">
+                <div>Name</div>
+                <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                <div>Email</div>
+                <input type="email" name="name" id="name" placeholder="Enter Your Email ID">
+                <div>Phone No.</div>
+                <input type="tel" name="name" id="name" placeholder="Enter Your Phone No.">
+                <div>Feedback</div>
+                <textarea></textarea>
+                <button>Sumbit</button>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        Copyright © www.daschickens.in ALL RIGHTS RESERVED
+    </section>
+</body>
+
+</html>
